@@ -1,0 +1,40 @@
+<p>
+    立方体を積み重ねるミッションです。
+</p>
+<p>
+    あなたは立方体の詳細 (3つの整数のタプル : X座標, Y座標, 辺の長さ) のリストを与えられます。
+    与えられた立方体をできるだけ高く積み重ねた結果の高さを整数で返して下さい。
+</p>
+<ul>
+    <li>各座標は最小値です。全ての辺は座標軸に平行です。</li>
+    <li>立方体を積み重ねる順番は任意ですが立方体の X, Y座標は変更出来ません。</li>
+    <li>少なくとも 1x1 の面が接していれば積み重ねられます。</li>
+</ul>
+<p><strong>注意 :</strong></p>
+<ul>
+    <li>常に全ての立方体を使う必要はありません。</li>
+</ul>
+
+<div class="for_info_only">
+    <p><strong>Examples :</strong></p>
+    <pre class="brush: python">stacking_cubes([(0, 0, 2), (1, 1, 2), (3, 2, 2)]) == 4
+stacking_cubes([(0, 0, 2), (1, 1, 2), (0, 2, 2), (2, 2, 1)]) == 6
+stacking_cubes([(0, 0, 2), (0, 2, 2), (0, 2, 2), (2, 0, 2), (2, 0, 2), (2, 0, 2), (2, 0, 2)]) == 8</pre>
+</div>
+
+<table>
+    <tr>
+        <td><img title="example01" src="{{MEDIA}}example_01.png" alt="example" style="max-height: 300px"/></td>
+        <td><img title="example02" src="{{MEDIA}}example_02.png" alt="example" style="max-height: 300px"/></td>
+        <td><img title="example03" src="{{MEDIA}}example_03.png" alt="example" style="max-height: 300px"/></td>
+    </tr>
+</table>
+
+<p><strong>入力 : </strong> 立方体の詳細(3つの整数のタプル : X座標, Y座標, 辺の長さ) のリスト</p>
+<p><strong>出力 : </strong> 積み重ねた立方体の高さ(整数)</p>
+
+<p> <strong>前提条件:</strong></p>
+<ul>
+    <li>2 &le; 立方体の数 &le; 50</li>
+    <li>-100 &le; X(Y) 座標 &le; 100</li>
+</ul>

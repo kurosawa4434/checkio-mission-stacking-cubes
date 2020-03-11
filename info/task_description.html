@@ -1,0 +1,41 @@
+<p>
+    This is a mission to stacking cubes.
+</p>
+<p>
+    You are given a list of cube details (tuple of 3 integers: X coordinate, Y coordinate, edge length).<br/>
+    You have to return the largest in stacking height of the cubes.
+</p>
+<ul>
+    <li>Each coordinate is the minimum value. </li>
+    <li>All edges parallel to the coordinate axes.</li>
+    <li>The order of stacking the cubes is arbitrary, but the X and Y coordinates of the cubes can't be changed.</li>
+    <li>if at least 1x1 faces touch, they will be stacked.</li>
+</ul>
+<p><strong>Note :</strong></p>
+<ul>
+    <li>You don't always need to use the all cubes.</li>
+</ul>
+
+<div class="for_info_only">
+    <p><strong>Examples :</strong></p>
+    <pre class="brush: python">stacking_cubes([(0, 0, 2), (1, 1, 2), (3, 2, 2)]) == 4
+stacking_cubes([(0, 0, 2), (1, 1, 2), (0, 2, 2), (2, 2, 1)]) == 6
+stacking_cubes([(0, 0, 2), (0, 2, 2), (0, 2, 2), (2, 0, 2), (2, 0, 2), (2, 0, 2), (2, 0, 2)]) == 8</pre>
+</div>
+
+<table>
+    <tr>
+        <td><img title="example01" src="{{MEDIA}}example_01.png" alt="example" style="max-height: 300px"/></td>
+        <td><img title="example02" src="{{MEDIA}}example_02.png" alt="example" style="max-height: 300px"/></td>
+        <td><img title="example03" src="{{MEDIA}}example_03.png" alt="example" style="max-height: 300px"/></td>
+    </tr>
+</table>
+
+<p><strong>Input : </strong> A list of tuples of 3 integers.</p>
+<p><strong>Output : </strong> An integer.</p>
+
+<p> <strong>Precondition :</strong></p>
+<ul>
+    <li>2 &le; len(cubes) &le; 50</li>
+    <li>-100 &le; X, Y coordinate &le; 100</li>
+</ul>
