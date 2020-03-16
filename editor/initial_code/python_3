@@ -8,7 +8,7 @@ def stacking_cubes(cubes: List[Tuple[int, int, int]]) -> int:
 
 if __name__ == '__main__':
     assert stacking_cubes([(0, 0, 2), (1, 1, 2), (3, 2, 2)]) == 4, 'basic'
-    assert stacking_cubes([(0, 0, 2), (1, 1, 2), (0, 2, 2), (2, 2, 1)]) == 6, 'basic 2'
+    assert stacking_cubes([(0, 0, 2), (1, 1, 2), (1, 2, 1), (2, 2, 2)]) == 6, 'basic 2'
     assert stacking_cubes([(0, 0, 2), (2, 0, 2), (2, 0, 2), (0, 2, 2), (0, 2, 2), (0, 2, 2), (0, 2, 2)]) == 8, 'towers'
     assert stacking_cubes([(0, 0, 2), (0, 3, 2), (3, 0, 2)]) == 2, 'no stacking'
     assert stacking_cubes([(-1, -1, 2), (0, 0, 2), (-2, -2, 2)]) == 6, 'negative coordinates'
