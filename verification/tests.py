@@ -7,7 +7,7 @@ Each test is a dict with
     "explanation" -- not necessarily a key, it's used for an additional info in animation.
 """
 from my_solution import stacking_cubes, select_drawing_cubes
-from random import shuffle
+from random import shuffle, randint
 
 
 def make_test_dic(input, answer, explanation):
@@ -29,6 +29,21 @@ def make_basic_tests(inputs):
     return basic_tests
 
 
+def make_random_tests(num):
+    random_tests = []
+    for _ in range(num):
+        input_cubes = []
+        for _ in range(20):
+            input_cubes.append((randint(-10, 10), randint(-10, 10), randint(1, 5)))
+        answer, answer_cubes = stacking_cubes(input_cubes)
+        random_tests.append({
+            'input': input_cubes,
+            'answer': answer,
+            'explanation': select_drawing_cubes(answer_cubes),
+        })
+    return random_tests
+
+
 TESTS = {
     "Basics": make_basic_tests([
         # basic
@@ -46,8 +61,8 @@ TESTS = {
             [
                 (0, 0, 2),
                 (1, 1, 2),
-                (0, 2, 2),
-                (2, 2, 1),
+                (2, 2, 2),
+                (1, 2, 1),
             ],
             6,
             range(3),
@@ -123,15 +138,15 @@ TESTS = {
         [
             [
                 (i, 0, 2) for i in range(10)
-            ]+[
-                (9, i+1, 2) for i in range(10)
-            ]+[
-                (8-i, 10, 2) for i in range(10)
-            ]+[
-                (-1, 9-i, 2) for i in range(8)
+            ] + [
+                (9, i + 1, 2) for i in range(10)
+            ] + [
+                (8 - i, 10, 2) for i in range(10)
+            ] + [
+                (-1, 9 - i, 2) for i in range(8)
             ],
-            10*2*3 + 8*2,
-            range(10*3 + 8),
+            10 * 2 * 3 + 8 * 2,
+            range(10 * 3 + 8),
         ],
         # Escher
         [
@@ -156,4 +171,5 @@ TESTS = {
             range(15),
         ],
     ]),
+    'Randoms': make_random_tests(8),
 }
