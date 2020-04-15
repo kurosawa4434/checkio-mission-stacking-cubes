@@ -1,19 +1,20 @@
 <p>
-    This is a mission to stacking cubes.
+    In this mission you'll have to stack the cubes.
 </p>
 <p>
-    You are given a list of cube details (tuple of 3 integers: X coordinate, Y coordinate, edge length).<br/>
-    You have to return the largest in stacking height of the cubes.
+    You are given a list of cube details (a tuple of 3 integers: X coordinate, Y coordinate, and edge length).<br/>
+    You have to return the maximum stacking height of the cubes.
 </p>
 <ul>
-    <li>Each coordinate is the minimum value. </li>
-    <li>All edges parallel to the coordinate axes.</li>
-    <li>The order of stacking the cubes is arbitrary, but the X and Y coordinates of the cubes can't be changed.</li>
-    <li>if at least 1x1 faces touch, they will be stacked.</li>
+    Here are some of the conditions: 
+    <li>each coordinate is the minimum value;</li>
+    <li>all edges are parallel to the coordinate axes;</li>
+    <li>the order of cube stacking is arbitrary, but the X and Y coordinates of the cubes can't be changed;</li>
+    <li>if at least 1x1 faces of the cubes touch, they will be stacked.</li>
 </ul>
-<p><strong>Note :</strong></p>
+<p><strong>Note:</strong></p>
 <ul>
-    <li>You don't always need to use the all cubes.</li>
+    <li>You don't necessarily need to use all of the cubes.</li>
 </ul>
 
 <div class="for_info_only">
@@ -31,10 +32,10 @@ stacking_cubes([(0, 0, 2), (0, 2, 2), (0, 2, 2), (2, 0, 2), (2, 0, 2), (2, 0, 2)
     </tr>
 </table>
 
-<p><strong>Input : </strong> A list of tuples of 3 integers.</p>
-<p><strong>Output : </strong> An integer.</p>
+<p><strong>Input:</strong> A list of tuples of 3 integers.</p>
+<p><strong>Output:</strong> An integer.</p>
 
-<p> <strong>Precondition :</strong></p>
+<p> <strong>Precondition:</strong></p>
 <ul>
     <li>2 &le; len(cubes) &le; 50</li>
     <li>-100 &le; X, Y coordinate &le; 100</li>
